@@ -115,6 +115,9 @@ nav {
   .hamburger {
     display: flex;
   }
+  .nav-right {
+    display: none;
+  }
 }
 .hamburger span {
   display: block;
