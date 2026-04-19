@@ -112,8 +112,32 @@ nav {
 }
 
 @media (max-width: 768px) {
-  .hamburger {
+  nav {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .nav-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .btn-login, .btn-signup {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+
+  /* Hero buttons side by side */
+  .hero-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
   }
 }
 .hamburger span {
