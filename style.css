@@ -115,7 +115,7 @@ nav {
   nav {
     display: flex;
     align-items: center;
-    padding:12px 16px;
+    padding:10px 10px;
     justify-content: space-between;
     flex-wrap: nowrap;
   }
@@ -139,7 +139,7 @@ nav {
 
  .hero-btn-primary, .hero-btn-outline {
     font-size: 0.6rem;
-    padding: 10px 11px;
+    padding: 10px 10px;
      white-space: nowrap;
   }
 
