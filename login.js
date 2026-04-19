@@ -23,4 +23,26 @@ loginInputs.forEach(input => {
   });
 });
 
+// Login validation
+const loginBtn = document.querySelector('.login-btn-primary');
+const emailInput = document.querySelector('.login-input[type="email"]');
 
+loginBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  const email = emailInput.value.trim();
+  const password = loginPassword.value.trim();
+
+  if (email === '') {
+    alert('Please enter your email.');
+    return;
+  }
+
+  if (password === '') {
+    alert('Please enter your password.');
+    return;
+  }
+
+  // All good — go to dashboard
+  window.location.href = 'dash.html';
+});
