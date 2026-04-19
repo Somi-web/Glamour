@@ -113,7 +113,8 @@ nav {
 
 @media (max-width: 768px) {
   nav {
-    display: flex;
+    display: block;
+    font-size: 2rem;
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -138,6 +139,7 @@ nav {
     flex-direction: row;
     gap: 12px;
     justify-content: center;
+   flex-wrap:nowrap;
   }
 }
 .hamburger span {
