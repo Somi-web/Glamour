@@ -105,10 +105,16 @@ nav {
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 5px;
   padding: 4px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
 }
 .hamburger span {
   display: block;
