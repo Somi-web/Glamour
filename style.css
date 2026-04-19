@@ -116,7 +116,7 @@ nav {
     display: flex;
   }
   .nav-right {
-    display: none;
+    display: inline-block;
   }
 }
 .hamburger span {
