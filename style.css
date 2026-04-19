@@ -115,7 +115,7 @@ nav {
   nav {
     display: flex;
     align-items: center;
-    padding:10px 10px;
+    padding:12px 10px;
     justify-content: space-between;
     flex-wrap: nowrap;
   }
@@ -124,7 +124,7 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     flex-wrap: nowrap;
   }
 
