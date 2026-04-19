@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glamo | Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="pay-body">
+
+   <main class="pay-main">
+        <!-- Lock Icon -->
+        <div class="pay-lock-icon">
+         <i class="fas fa-lock"></i>
+        </div>
+
+        <!-- Activation Message -->
+        <div class="pay-alert">
+            Activate your <strong>Glamour account</strong> to unlock
+            earning features. Transfer exactly <strong>₦14,000</strong> below.
+        </div>
+
+        <!-- Payment Card -->
+        <div class="pay-card">
+            <h2 class="pay-card-title">Secure Payment Gateway</h2>
+            <p class="pay-card-subtitle">Complete payment within:</p>
+
+            <!-- Countdown Timer -->
+            <div class="pay-timer" id="countdown">10:00</div>
+
+            <!-- Account Details -->
+            <div class="pay-details">
+                <p class="pay-details-name">GLAMOUR PAYMENT</p>
+                <p class="pay-details-bank">MONIEPOINT</p>
+                <p class="pay-details-number">5125575069</p>
+                <p class="pay-details-holder">CHIKA ALOYSIUS KELECHUKWU</p>
+            </div>
+
+            <p class="pay-after-text">After payment, click below to verify.</p>
+        </div>
+
+        <!-- CTA Button -->
+        <a href="https://t.me/Glamouractregistration" class="pay-complete-btn">
+          I've completed payment
+        </a>
+    </main>
+
+  <script src="payment.js"></script>
+</body>
+</html>

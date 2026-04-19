@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glamo | Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="dash-body">
+
+  <!-- TOP BAR -->
+  <header class="dash-header">
+        <div class="dash-welcome">
+            <p class="dash-welcome-text">Welcome back</p>
+            <h2 class="dash-username">Glam User</h2>
+        </div>
+        <div class="dash-header-icons">
+            <button class="dash-icon-btn"><i class="fas fa-bell"></i></button>
+            <button class="dash-icon-btn"><i class="fas fa-circle-user"></i></button>
+        </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="dash-main">
+
+        <!-- Earnings Card -->
+        <div class="dash-earnings-card">
+            <p class="dash-earnings-label">Total Earnings</p>
+            <h1 class="dash-earnings-amount">€7.50</h1>
+            <p class="dash-earnings-naira">₦12,000</p>
+            <div class="dash-earnings-btns">
+                <a href="payment.html" class="dash-btn-upgrade">Upgrade</a>
+                <button class="dash-btn-withdraw" id="withdrawBtn">Withdraw</button>
+            </div>
+        </div>
+
+        <!-- Earn Section -->
+        <div class="dash-section-card">
+            <h3 class="dash-section-title">Earn</h3>
+            <div class="dash-icons-grid">
+                <div class="dash-icon-item">
+                    <div class="dash-icon-circle"><i class="fas fa-video"></i></div>
+                    <span>Live</span>
+                </div>
+                <div class="dash-icon-item">
+                    <div class="dash-icon-circle"><i class="fas fa-comments"></i></div>
+                    <span>Chat</span>
+                </div>
+                <div class="dash-icon-item">
+                    <div class="dash-icon-circle"><i class="fas fa-heartbeat"></i></div>
+                    <span>Fitness</span>
+                </div>
+                <div class="dash-icon-item">
+                    <div class="dash-icon-circle"><i class="fas fa-language"></i></div>
+                    <span>Lingua</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- More Ways to Earn -->
+        <div class="dash-section-card">
+            <h3 class="dash-section-title">More Ways to Earn</h3>
+            <div class="dash-icons-grid">
+                <div class="dash-icon-item">
+                    <div class="dash-icon-circle"><i class="fas fa-play"></i></div>
+                    <span>Watch</span>
+                </div>
+                <div class="dash-icon-item">
+                    <div class="dash-icon-circle"><i class="fas fa-hand-pointer"></i></div>
+                    <span>Tap</span>
+                </div>
+                <div class="dash-icon-item">
+                    <div class="dash-icon-circle"><i class="fas fa-upload"></i></div>
+                    <span>Upload</span>
+                </div>
+                <div class="dash-icon-item">
+                    <div class="dash-icon-circle"><i class="fa-brands fa-x-twitter"></i></div>
+                    <span>Social</span>
+                </div>
+        </div>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="dash-section-card">
+            <h3 class="dash-section-title">Recent Activity</h3>
+            <p class="dash-empty-text">No recent activity yet.</p>
+        </div>
+
+    </main>
+
+  <!-- WITHDRAW POPUP -->
+  <div class="dash-popup-overlay" id="withdrawPopup">
+        <div class="dash-popup">
+        <p class="dash-popup-text">Upgrade your account to unlock withdrawals.</p>
+        <button class="dash-popup-ok" id="popupOkBtn">OK</button>
+        </div>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <nav class="dash-bottom-nav">
+        <button class="dash-nav-item active"><i class="fas fa-house"></i></button>
+        <button class="dash-nav-item"><i class="fas fa-chart-bar"></i></button>
+        <button class="dash-nav-item"><i class="fas fa-wallet"></i></button>
+        <button class="dash-nav-item"><i class="fas fa-user"></i></button>
+  </nav>
+
+
+  <script src="dash.js"></script>
+</body>
+</html>
+git init
+git add .
+git commit -m "first commit"

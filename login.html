@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glamour | Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="login-nav">
+    <span class="login-logo">Glamour</span>
+    <div class="login-nav-btn">
+      <span class="login-nav-dot"></span>
+      Official Login
+    </div>
+  </nav>
+
+  <!-- LOGIN CARD -->
+  <main class="login-main">
+        <div class="login-card">
+
+            <!-- Badge -->
+            <div class="login-badge">
+                <span class="login-badge-dot"></span>
+                Glamour &bull; Login
+            </div>
+
+            <!-- Heading -->
+            <h1 class="login-heading">Sign in to your account</h1>
+            <p class="login-subtext">Enter credentials to access Glamour features.</p>
+
+            <!-- Form Fields -->
+            <div class="login-form">
+
+                <!-- Email -->
+                <div class="login-field">
+                <label class="login-label">Email</label>
+                <div class="login-input-wrap">
+                    <span class="login-input-icon"><i class="fas fa-envelope"></i></span>
+                    <input type="email" class="login-input" placeholder="you@example.com"/>
+                </div>
+                </div>
+
+                <!-- Password -->
+                <div class="login-field">
+                    <label class="login-label">Password</label>
+                    <div class="login-input-wrap">
+                        <span class="login-input-icon"><i class="fas fa-lock"></i></span>
+                        <input type="password" class="login-input" id="loginPassword" placeholder="Enter password"/>
+                        <button class="login-eye-btn" id="togglePassword" type="button">
+                        <i class="fas fa-eye" id="eyeIcon"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Login Button -->
+                <a href="dash.html" class="login-btn-primary">
+                    <i class="fas fa-user-check"></i>
+                    Login
+                </a>
+
+                <!-- Register Button -->
+                <a href="signup.html" class="login-btn-secondary">
+                <i class="fas fa-user-plus"></i>
+                Register
+                </a>
+
+            </div>
+
+        </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="login-footer">
+    &copy; 2026 Glamo. All Rights Reserved.
+  </footer>
+
+  <script src="login.js"></script>
+</body>
+</html>
