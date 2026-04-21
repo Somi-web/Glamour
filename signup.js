@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-  const registerBtn = document.querySelector('.reg-btn-primary');
-  const regForm = document.querySelector('.reg-form');
-  const regInputs = document.querySelectorAll('.reg-input');
+  // Input focus animations
+  const inputs = document.querySelectorAll('.reg-input');
+  inputs.forEach(input => {
+    input.addEventListener('focus', () => {
+      input.parentElement.style.transform = 'scale(1.01)';
+      input.parentElement.style.transition = 'transform 0.2s ease';
+    });
+    input.addEventListener('blur', () => {
+      input.parentElement.style.transform = 'scale(1)';
+    });
+  });
 
-  const nameInput = regInputs[0];
-  const emailInput = regInputs[1];
-  const passwordInput = regInputs[2];
-
-  if (registerBtn) {
-    registerBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-
-      const name = nameInput.value.trim();
+   const name = nameInput.value.trim();
       const email = emailInput.value.trim();
       const password = passwordInput.value.trim();
 
@@ -50,4 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
   }
+
 });
+
+     
