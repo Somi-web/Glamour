@@ -23,49 +23,95 @@
   <main class="reg-main">
         <div class="reg-card">
 
-            <!-- Badge -->
-            <div class="reg-badge">
-                <span class="reg-badge-dot"></span>
-                Glamour &bull; Register
-            </div>
+         <!DOCTYPE html>
 
-            <!-- Heading -->
-            <h1 class="reg-heading">Create your account</h1>
-            <p class="reg-subtext">Fill in details to get started.</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glamo | Register</title>
 
-         <!-- Form Fields -->
-          <form class="reg-form" action="https://formspree.io/f/xreryelv" method="POST">
-          
-            <div class="reg-field">
-              <label class="reg-label">Name</label>
-              <input type="text" name="name" class="reg-input" placeholder="Your name" required/>
-            </div>
-          
-            <div class="reg-field">
-              <label class="reg-label">Email</label>
-              <input type="email" name="email" class="reg-input" placeholder="you@example.com" required/>
-            </div>
-          
-            <div class="reg-field">
-              <label class="reg-label">Password</label>
-              <input type="password" name="password" class="reg-input" placeholder="Enter password" required/>
-            </div>
-          
-            <!-- Register Button -->
-            <button type="submit" class="reg-btn-primary">
-              <i class="fas fa-user-check"></i>
-              Register
-            </button>
-          
-            <!-- Back to Login Button -->
-            <a href="login.html" class="reg-btn-secondary">
-              <i class="fas fa-arrow-left"></i>
-              Back to Login
-            </a>
-          
-          </form>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
 
+  <!-- NAVBAR -->
+
+  <nav class="reg-nav">
+    <a href="index.html" class="reg-logo">Glamour</a>
+    <a href="#" class="reg-nav-btn">
+      <span class="reg-nav-dot"></span>
+      Official Registration
+    </a>
+  </nav>
+
+  <!-- REGISTER CARD -->
+
+  <main class="reg-main">
+    <div class="reg-card">
+
+      <!-- Badge -->
+      <div class="reg-badge">
+        <span class="reg-badge-dot"></span>
+        Glamour &bull; Register
+      </div>
+    
+      <!-- Heading -->
+      <h1 class="reg-heading">Create your account</h1>
+      <p class="reg-subtext">Fill in details to get started.</p>
+    
+      <!-- Form Fields -->
+      <!-- ✅ FIXED: Removed Formspree action -->
+      <form class="reg-form">
+    
+        <div class="reg-field">
+          <label class="reg-label">Name</label>
+          <input type="text" name="name" class="reg-input" placeholder="Your name" required/>
         </div>
+    
+        <div class="reg-field">
+          <label class="reg-label">Email</label>
+          <input type="email" name="email" class="reg-input" placeholder="you@example.com" required/>
+        </div>
+    
+        <div class="reg-field">
+          <label class="reg-label">Password</label>
+          <input type="password" name="password" class="reg-input" placeholder="Enter password" required/>
+        </div>
+    
+        <!-- Register Button -->
+        <button type="submit" class="reg-btn-primary">
+          <i class="fas fa-user-check"></i>
+          Register
+        </button>
+    
+        <!-- Back to Login Button -->
+        <a href="login.html" class="reg-btn-secondary">
+          <i class="fas fa-arrow-left"></i>
+          Back to Login
+        </a>
+    
+      </form>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+
+  <footer class="reg-footer">
+    &copy; 2026 Glamo. All Rights Reserved.
+  </footer>
+
+  <!-- ✅ Firebase JS -->
+
+  <script type="module" src="signup.js"></script>
+
+</body>
+</html>
+
   </main>
 
   <!-- FOOTER -->
@@ -75,7 +121,7 @@
 
 
 
- <script src="signup.js"></script>
+ <script type="module" src="signup.js"></script>
 
 </body>
 </html>
