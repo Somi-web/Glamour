@@ -2,12 +2,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebas
 import { getAuth, createUserWithEmailAndPassword } from
 "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
 const firebaseConfig = {
-apiKey: "YOUR_KEY",
-authDomain: "YOUR_DOMAIN",
-projectId: "YOUR_PROJECT_ID",
-storageBucket: "YOUR_BUCKET",
-messagingSenderId: "YOUR_ID",
-appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyBtVTR7hUXxAoXmJNQj3cm_A_5Ty-7xZDc",
+  authDomain: "glamour-app-b33f6.firebaseapp.com",
+  projectId: "glamour-app-b33f6",
+  storageBucket: "glamour-app-b33f6.firebasestorage.app",
+  messagingSenderId: "586600362166",
+  appId: "1:586600362166:web:55c39b34a41b504ab03617"
 };
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
