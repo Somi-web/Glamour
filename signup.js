@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword } from
-"https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-auth.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyBtVTR7hUXxAoXmJNQj3cm_A_5Ty-7xZDc",
   authDomain: "glamour-app-b33f6.firebaseapp.com",
@@ -9,6 +9,7 @@ const firebaseConfig = {
   messagingSenderId: "586600362166",
   appId: "1:586600362166:web:55c39b34a41b504ab03617"
 };
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
@@ -50,20 +51,26 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-         createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-      // Optional: you can store name later in Firestore
-      regForm.innerHTML = `
-      <div class="reg-success">
-      <p class="reg-success-text">Registration successful! Redirecting to login...</p>
-          <div class="reg-spinner"></div>
-      </div>
-      `;
-      setTimeout(() => {
-      window.location.href = 'login.html';
-      }, 2000);
-      })
-      .catch((error) => {
-      alert(error.message);
-      });
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+
+          regForm.innerHTML = `
+            <div class="reg-success">
+              <p class="reg-success-text">Registration successful! Redirecting to login...</p>
+              <div class="reg-spinner"></div>
+            </div>
+          `;
+
+          setTimeout(() => {
+            window.location.href = 'login.html';
+          }, 2000);
+
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+
+    });
+  }
+
 });
