@@ -1967,3 +1967,534 @@ body {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+/* ======================== */
+/*     LEARN MORE PAGE      */
+/* ======================== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black: #05080f;
+  --navy: #080f20;
+  --yellow: #f5a800;
+  --yellow-light: #ffc93c;
+  --white: #ffffff;
+  --gray: rgba(255,255,255,0.55);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── NAVBAR ── */
+.lm-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  background: rgba(8,15,32,0.95);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(245,168,0,0.08);
+  animation: fadeDown 0.6s ease both;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.lm-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.lm-signup-btn {
+  background: var(--yellow);
+  color: #000;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.lm-signup-btn:hover {
+  background: var(--yellow-light);
+  transform: scale(1.04);
+}
+
+/* ── HERO ── */
+.lm-hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 28px 60px;
+  background: radial-gradient(ellipse at 50% 30%, rgba(245,168,0,0.08) 0%, transparent 65%), var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.lm-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(245,168,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245,168,0,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+.lm-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--yellow);
+  letter-spacing: 3px;
+  margin-bottom: 16px;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+
+.lm-hero-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.2rem, 8vw, 4rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+
+.lm-hero-sub {
+  font-size: 1rem;
+  color: var(--gray);
+  max-width: 500px;
+  line-height: 1.8;
+  margin-bottom: 36px;
+  animation: fadeUp 0.6s 0.3s ease both;
+}
+
+.lm-hero-btn {
+  background: var(--yellow);
+  color: #000;
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s, transform 0.2s;
+  animation: fadeUp 0.6s 0.4s ease both;
+}
+
+.lm-hero-btn:hover {
+  background: var(--yellow-light);
+  transform: translateY(-2px);
+}
+
+/* ── SECTIONS ── */
+.lm-section {
+  padding: 70px 24px;
+}
+
+.lm-section-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.lm-section-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--yellow);
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.lm-section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.lm-section-sub {
+  font-size: 0.98rem;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+/* ── ACCESS SECTION ── */
+.lm-access { background: var(--navy); }
+
+.lm-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lm-card {
+  background: #0d1526;
+  border: 1px solid rgba(245,168,0,0.15);
+  border-radius: 18px;
+  padding: 28px 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.lm-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(245,168,0,0.1);
+}
+
+.lm-card-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(245,168,0,0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--yellow);
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.lm-card h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.lm-card-amount {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--yellow);
+  margin-bottom: 8px;
+}
+
+.lm-card-amount span {
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+.lm-card-desc {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* ── REFERRAL SECTION ── */
+.lm-referral { background: var(--black); }
+
+.lm-referral-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.lm-ref-card {
+  background: #161616;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 18px;
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.2s;
+}
+
+.lm-ref-card:hover { transform: translateY(-2px); }
+
+.lm-ref-number {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--yellow);
+  min-width: 60px;
+  text-align: center;
+}
+
+.lm-ref-info h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.lm-ref-info p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+.lm-ref-info strong { color: var(--yellow); }
+
+/* ── NOTE ── */
+.lm-note {
+  background: rgba(245,168,0,0.06);
+  border: 1px solid rgba(245,168,0,0.15);
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.65);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.6;
+}
+
+.lm-note i { color: var(--yellow); flex-shrink: 0; }
+
+/* ── ACTIVITIES SECTION ── */
+.lm-activities { background: var(--navy); }
+
+.lm-activities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.lm-activity-item {
+  background: #0d1526;
+  border: 1px solid rgba(245,168,0,0.1);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--white);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.lm-activity-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(245,168,0,0.3);
+}
+
+.lm-activity-item i {
+  color: var(--yellow);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ── BENEFITS SECTION ── */
+.lm-benefits { background: var(--black); }
+
+.lm-benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lm-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.98rem;
+  color: rgba(255,255,255,0.8);
+  padding: 14px 18px;
+  background: #161616;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.2s;
+}
+
+.lm-benefit-item:hover { transform: translateX(4px); }
+
+.lm-benefit-item i {
+  color: var(--yellow);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ── NOTICE SECTION ── */
+.lm-notice { background: var(--navy); }
+
+.lm-notice-box {
+  background: rgba(245,168,0,0.06);
+  border: 1px solid rgba(245,168,0,0.2);
+  border-radius: 20px;
+  padding: 32px 28px;
+  text-align: center;
+}
+
+.lm-notice-box i {
+  font-size: 2rem;
+  color: var(--yellow);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.lm-notice-box h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.lm-notice-box p {
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+/* ── CTA SECTION ── */
+.lm-cta {
+  background: var(--black);
+  padding: 70px 24px;
+  text-align: center;
+}
+
+.lm-cta h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.lm-cta p {
+  font-size: 1rem;
+  color: var(--gray);
+  margin-bottom: 32px;
+}
+
+.lm-cta-btn {
+  background: var(--yellow);
+  color: #000;
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 16px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 20px rgba(245,168,0,0.3);
+}
+
+.lm-cta-btn:hover {
+  background: var(--yellow-light);
+  transform: translateY(-2px);
+}
+
+/* ── WHATSAPP BUTTON ── */
+.lm-whatsapp {
+  background: var(--black);
+  padding: 40px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.lm-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #25D366;
+  color: #ffffff;
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 16px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+}
+
+.lm-whatsapp-btn i {
+  font-size: 1.3rem;
+}
+
+.lm-whatsapp-btn:hover {
+  background: #20ba58;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+}
+
+/* ── WHATSAPP BUTTON ── */
+.lm-whatsapp {
+  background: var(--black);
+  padding: 0 24px 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.lm-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #25D366;
+  color: #ffffff;
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 16px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.3);
+}
+
+.lm-whatsapp-btn i {
+  font-size: 1.3rem;
+}
+
+.lm-whatsapp-btn:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+}
+
+/* ── FOOTER ── */
+.lm-footer {
+  text-align: center;
+  padding: 24px;
+  background: #030508;
+  color: rgba(255,255,255,0.3);
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.lm-footer span { color: var(--yellow); }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
